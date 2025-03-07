@@ -1,8 +1,8 @@
 class Order < ApplicationRecord
-  # 1
+  # Approach 1
   enum status: [:imported, :approved, :rejected]
 
-  # 2
+  # Approach 2
   enum status: %w[imported approved rejected].index_by(&:itself)
 end
 
